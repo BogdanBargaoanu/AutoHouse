@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rezervare - AutoHouse.ro</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="imagini/autohouselogo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="css/lightbox.css" rel="stylesheet" />
+  <script>
+    var curday = function(sp){
+today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //As January is 0.
+var yyyy = today.getFullYear();
+
+if(dd<10) dd='0'+dd;
+if(mm<10) mm='0'+mm;
+return (mm+sp+dd+sp+yyyy);
+};
+console.log(curday('/'));
+console.log(curday('-'));
+ </script>
+
+  <style>
+    option{
+       font-size: 16px;
+    padding: 5px;
+    }
+    select {
+        width: 150px;
+        margin: 10px;
+    }
+
+    .logo-image{
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -13px;
+}
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+      background-color:#000000;
+      opacity:0.9;
+    }
+    
+     .jumbotron {
+     	background-image:url(imagini/main1.jpg);
+     	background-repeat: no-repeat;
+     	background-attachment: fixed;
+     	background-size: 100% ;
+      margin-bottom: 0;
+    }
+   
+    
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="jumbotron">
+  <div class="container text-center">
+    <h1 style="color:red"><b style="font-family: 'Brush Script MT', cursive;">AutoHouse</b></h1>      
+    <p style="color:white ">Autovehicule noi și second-hand</p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="despre.html">
+      <div class="logo-image">
+            <img src="imagini/rsz_logo4.jpg" class="img-fluid">
+      </div>
+</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="catalog.html"><i style="color:#e30000"><b>Catalog</b></i></a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Oferte
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="AudiRS6.html">Audi RS6</a></li>
+          <li><a href="MercedesC250.html">Mercedes C250d</a></li>
+          <li><a href="CorvetteC7.html">Corvette C7</a></li></ul>
+        <li><a href="stores.html">Stores</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="rezervare.html"><span class="glyphicon glyphicon-log-in"></span> Rezervare </a></li>
+        <li><a href="faq.html"><span class="glyphicon glyphicon-question-sign"></span> FAQ's </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<form>
+<div class="text-center">
+  <h1><b>Formular rezervare</b></h1>
+  <h2><small>* - câmp obligatoriu</small></h2>
+  <br><hr><br></div>
+  <div class="container">
+  <h2>Date de contact:<small> * </small></h2>
+  
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Email:</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Nume/Prenume:</label>
+      <div class="col-sm-10">          
+        <input type="name" class="form-control" id="name" placeholder="Enter full name" name="name">
+      </div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="radio" id="fizica" name="persoana"><b><font size="+1"> Persoană Fizică</font></b></label>
+          <label><input type="radio" id="juridica" name="persoana"><b><font size="+1"> Persoană Juridică</font></b></label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <div class="form-group">
+    <form action="/action_page.php" >
+<label class="control-label col-sm-12" for="cars"><h2>Alege modelul:<small> * </small></h2></label>
+  <select class="control-label col-sm-12" placeholder="Selecteaza masina dorita" id="cars" name="cars">
+    <option value="0">Selectează mașina dorită</option>
+    <option value="golf7">VW GOLF 7 2017 2.0TDI DSG</option>
+    <option value="rs6" style="color:red">AUDI RS6 C7.5 4.0TFSI</option>
+    <option value="brz">SUBARU BRZ 2.0i SPORT</option>
+    <option value="corvette" style="color:red">CORVETTE C7 6.2 V8 2016</option>
+    <option value="bmw6">BMW 6 SERIES 630i</option>
+    <option value="mbc" style="color:red">MERCEDES-BENZ C250D</option>
+    <option value="mbs">MERCEDES SCLASS 350d</option>
+    <option value="lambo">LAMBORGHINI GALLARDO SPYDER 520</option>
+    <option value="demon">DODGE DEMON</option>
+    <option value="mustang">FORD MUSTANG V6</option>
+    <option value="mondeo">FORD MONDEO TDCI MATRIX</option>
+    <option value="civic">HONDA CIVIC 1.4 SPORT</option>
+    <option value="golf6">VW GOLF 6 TSI</option>
+    <option value="bmw3">BMW 335 xDrive e90</option>
+    <option value="kia">KIA STINGER 2017</option>
+  </select>
+</div>
+</div>
+</form>
+<div class="container">
+  <br>
+<h2>Alege locatia:</h2>
+<form class="form-horizontal" action="/action_page.php">
+  <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <div class="checkbox">
+          <label><input type="radio" id="fizica" name="persoana"><b><font size="+1"> Cluj-Napoca</font></b></label>
+          <label><input type="radio" id="juridica" name="persoana"><b><font size="+1"> București</font></b></label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<br>
+<div class="container">
+<h2>Alege data preluării mașinii:<small> * </small></h2>
+<form class="form-horizontal" action="/action_page.php">
+<div class="col-sm-offset-2 col-sm-10">
+  <label for="start"></label>
+
+   <input id="sp" type="date" id="start" name="trip-start"
+       value="curday"
+       min="curday" max="2027-12-31"></div>
+     </form>
+   </div>
+<br>
+<div class="container">
+  <h2>Alte precizări: </h2>
+  <form class="form-horizontal" action="/action_page.php">
+    <div class="col-sm-offset-2 col-sm-10">
+      <textarea rows="6" cols="70" placeholder="Introdu text (maxim 100 cuvinte)">
+</textarea>
+</div>
+</form>
+</div>
+<br>
+<div class="container">
+<button type="submit" class="btn btn-danger btn-lg btn-block">Finalizare</button></div>
+
+
+<br><br>
+
+<footer class="container-fluid text-center">
+  <form class="form-inline">Primește alte oferte:
+    <input type="email" class="form-control" size="50" placeholder="Your Email">
+    <button type="button" class="btn btn-danger">Abonare</button>
+  </form>
+</footer>
+<script src="js/lightbox-plus-jquery.js"></script>
+</body>
+</html>
