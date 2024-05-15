@@ -19,7 +19,7 @@ git clone https://github.com/BogdanBargaoanu/AutoHouse.git
 - HTML
 - CSS
 - JavaScript
-- Bootstrap - un framework CSS pentru interfete web.
+- Bootstrap
 
 ## Caracteristici
 - Interfata responsiva
