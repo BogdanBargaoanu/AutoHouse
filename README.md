@@ -26,4 +26,9 @@ git clone https://github.com/BogdanBargaoanu/AutoHouse.git
 - Design modern
 - Pagini reutilizabile (se poate implementa crearea automata)
 
+## Template link
+Template-ul de site se poate vizualiza [aici](https://autohouse.netlify.app/).
+
 <b>Data creare: 2020.</b>
+
+
