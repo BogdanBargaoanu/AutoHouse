@@ -1,7 +1,7 @@
 ## <b> AutoHouse </b>
 
 <p>
-<font size = 4>Template Website HTML pentru categoria auto-vendor.
+<font size = 4>Template Website HTML pentru categoria automotive-dealer.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-g.svg)](https://opensource.org/licenses/MIT)
 </p>
